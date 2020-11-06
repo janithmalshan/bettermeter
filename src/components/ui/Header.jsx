@@ -1,30 +1,41 @@
 import * as React from "react"
 import { AppBar, Toolbar } from "@material-ui/core"
-import { List, ListItem, ListItemText, Hidden } from "@material-ui/core"
+import { List, ListItem, Hidden } from "@material-ui/core"
 import logo from '../../logo.svg'
 import SideDrawer from "./SideDrawer";
+import dash from '../../images/ic-nav-dash.svg'
+import site from '../../images/ic-nav-sites.svg'
+import camp from '../../images/ic-nav-camp.svg'
+import analyt from '../../images/ic-nav-analyt.svg'
+import live from '../../images/ic-nav-live.svg'
+import users from '../../images/ic-nav-users.svg'
+import {Link} from "react-router-dom";
 
 const navLinks = [
-    { title: `dashboard`, path: `/dashboard` },
-    { title: `sites`, path: `/sites` },
-    { title: `campaigns`, path: `/campaigns` },
-    { title: `analytics`, path: `/analytics` },
-    { title: `live view`, path: `/live-view` },
-    { title: `users`, path: `/users` },
-]
+    { title: `dashboard`, path: `/dashboard`, icon: dash },
+    { title: `sites`, path: `/sites`, icon: site },
+    { title: `campaigns`, path: `/campaigns`, icon: camp },
+    { title: `analytics`, path: `/analytics`, icon: analyt },
+    { title: `live view`, path: `/live-view`, icon: live },
+    { title: `users`, path: `/users`, icon: users },
+];
+
 const Header = () => {
     return (
-        <AppBar position="static">
+        <AppBar position="static" elevation={0}>
+            <div className="ui-appbar">
+                <img src={logo} className="ui-appbar__logo"/>
+            </div>
             <Toolbar>
-                <img src={logo}/>
                 <Hidden smDown> {/* show in desktop*/}
-                    <List component="nav" aria-labelledby="main navigation">
-                        {navLinks.map(({ title, path }) => (
-                            <a href={path} key={title}>
-                                <ListItem button>
-                                    <ListItemText primary={title} />
+                    <List component="nav" aria-labelledby="main navigation" className="ui-toolbar" disablePadding>
+                        {navLinks.map(({ title, icon , path }) => (
+                            <Link to={path} key={title}>
+                                <ListItem button className="ui-toolbar__link" activeClassName="00">
+                                    <img className="ui-toolbar__link-icon" src={icon}/>
+                                    <label className="ui-toolbar__link-label">{title}</label>
                                 </ListItem>
-                            </a>
+                            </Link>
                         ))}
                     </List>
                 </Hidden>
@@ -35,4 +46,5 @@ const Header = () => {
         </AppBar>
     )
 }
+
 export default Header

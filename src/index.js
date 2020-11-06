@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/styles.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Header from "./components/ui/Header";
+import {ThemeDefault} from "./components/overrideMui/ThemeOverride";
+import {ThemeProvider} from "@material-ui/core";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Header/>
-        <App/>
+        <ThemeProvider theme={ThemeDefault}>
+            <BrowserRouter>
+                <Header/>
+                <App/>
+            </BrowserRouter>
+        </ThemeProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

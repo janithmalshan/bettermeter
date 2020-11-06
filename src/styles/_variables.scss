@@ -1,0 +1,52 @@
+//Colors
+$primary: #101010;
+$secondary: #8482ff;
+$primaryTextColor: #404553;
+$secondaryTextColor: #8c95a8;
+
+$default-bg-color: #fafcfe;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  primaryColor: $primary;
+  secondaryColor: $secondary;
+  primaryTextColor: $primaryTextColor;
+  secondaryTextColor: $secondaryTextColor;
+}
+
+;
+
+//Dimensions
+$default-btn-size: 10px;
+$auth-btn-size: 50px;
+$main-nav: 70px;
+$main-footer: 72px;
+$menu-max-width: 1246px;
+$main-content-min-height: calc(100vh - #{$main-nav + $main-footer });
+$menu-height: calc(100vh - #{$main-nav});
+$main-content-max-width: 1200px;
+$padding-h-form: 25px;
+
+// -- images
+$img-path: "/styles/images/";
+$icon-path: "/styles/images/icons/";
+
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// Responsive
+$break-sm: 599px;
+$break-md: 950px;
+$break-tab: 768px;
+$break-desk: 1024px;
+$break-lap: 1366px;
+$break-lap-2: 1280px;
+
+//submenu
+$NavCountRed: #EB400F;
+$NavTitle: #404553;

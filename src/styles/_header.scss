@@ -1,0 +1,44 @@
+.ui-appbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__logo {
+    height: 20px;
+    margin: 4px 0 0 30px;
+  }
+}
+
+.ui-toolbar {
+  background: #ffffff;
+  display: flex;
+  align-items: start;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+
+  &__link {
+    text-decoration: none;
+    border-right: 1px solid;
+    height: 60px;
+    display: flex;
+    align-items: center;box-shadow: 1px 0px 0px #E5E5E5;
+
+    &-icon {
+      height: 20px;
+      margin: 0 10px 0 10px;
+    }
+
+    &-label {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      color: #5D6677;
+      text-decoration: none;
+      margin-right: 10px;
+      text-transform: capitalize;
+    }
+  }
+}

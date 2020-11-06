@@ -1,0 +1,18 @@
+//3rd Party Libraries
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap');
+
+//Custom Libraries
+@import 'variables.scss';
+@import 'header';
+//font-family: 'DM Mono', monospace;
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: unset;
+}
