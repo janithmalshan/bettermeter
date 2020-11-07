@@ -5,6 +5,7 @@
 @import 'variables.scss';
 @import 'header';
 @import 'dashboard';
+@import "tab-chart";
 //font-family: 'DM Mono', monospace;
 
 body {
@@ -12,7 +13,7 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e5e5e5;
+  background: #f8f5f5;
   @include mobile {
     background: #ffffff;
   }
@@ -30,6 +31,6 @@ a {
   font-family: 'DM Mono', monospace;
 }
 
-.ii {
-  position: fixed;
+.ui-z-index1 {
+  z-index: 1;
 }

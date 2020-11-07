@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     menu: {
         display: `block`,
         position: 'fixed',
-        top: '6px',
+        top: '12px',
         left: '20px'
     }
 })

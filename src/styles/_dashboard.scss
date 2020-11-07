@@ -13,6 +13,8 @@
 
 .ui-info-wrapper {
   padding: 0 80px;
+  margin-bottom: 60px;
+
   @include mobile {
       padding: 0;
   }

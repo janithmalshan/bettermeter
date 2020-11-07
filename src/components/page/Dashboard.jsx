@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import ContentWrapper from "../ui/ContentWrapper";
 import ItemRow from "../ui/ItemRow";
+import ChartTabView from "../ui/ChartTabView";
 
 class Dashboard extends Component {
     render() {
         return (
             <div>
                 <div className="ui-heading">Analytics</div>
+                <ChartTabView/>
                 <div className="ui-info-wrapper">
                     <div className="ui-info-wrapper__container">
                         <div className="ui-heading">Most Active Sites</div>
