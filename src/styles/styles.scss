@@ -4,6 +4,7 @@
 //Custom Libraries
 @import 'variables.scss';
 @import 'header';
+@import 'dashboard';
 //font-family: 'DM Mono', monospace;
 
 body {
@@ -11,8 +12,20 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e5e5e5;
+  @include mobile {
+    background: #ffffff;
+  }
+  * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
 }
 
 a {
   text-decoration: unset;
+}
+
+.ui-num {
+  font-family: 'DM Mono', monospace;
 }

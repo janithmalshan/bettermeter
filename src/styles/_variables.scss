@@ -50,3 +50,11 @@ $break-lap-2: 1280px;
 //submenu
 $NavCountRed: #EB400F;
 $NavTitle: #404553;
+
+$mobile-width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}

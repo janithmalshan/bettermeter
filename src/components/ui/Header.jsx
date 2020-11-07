@@ -10,6 +10,7 @@ import analyt from '../../images/ic-nav-analyt.svg'
 import live from '../../images/ic-nav-live.svg'
 import users from '../../images/ic-nav-users.svg'
 import {Link} from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles"
 
 const navLinks = [
     { title: `dashboard`, path: `/dashboard`, icon: dash },
@@ -20,7 +21,16 @@ const navLinks = [
     { title: `users`, path: `/users`, icon: users },
 ];
 
+const useStyles = makeStyles({
+    active: {
+        backgroundColor: 'red'
+    }
+});
+
 const Header = () => {
+
+    const classes = useStyles();
+
     return (
         <AppBar position="static" elevation={0}>
             <div className="ui-appbar">
@@ -31,7 +41,7 @@ const Header = () => {
                     <List component="nav" aria-labelledby="main navigation" className="ui-toolbar" disablePadding>
                         {navLinks.map(({ title, icon , path }) => (
                             <Link to={path} key={title}>
-                                <ListItem button className="ui-toolbar__link" activeClassName="00">
+                                <ListItem button className="ui-toolbar__link">
                                     <img className="ui-toolbar__link-icon" src={icon}/>
                                     <label className="ui-toolbar__link-label">{title}</label>
                                 </ListItem>
