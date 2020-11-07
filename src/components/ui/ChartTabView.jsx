@@ -21,12 +21,15 @@ class ChartTabView extends Component {
                 <div className="ui-tab-content">
                     <Hidden smDown> {/* show in desktop*/}
                         <div className="ui-tab-content-left">
-                            <ItemChartRow label="gl" count="32,884" icon={icon}/>
-                            <ItemChartRow label="ds" count="6,884" icon={icon}/>
-                            <ItemChartRow label="dk" count="2,884" icon={icon}/>
+                            <ItemChartRow label="gl" count="32,884" icon={icon} color="ui-item-row__img--orange"/>
+                            <ItemChartRow label="ds" count="6,884" icon={icon} color="ui-item-row__img--blue"/>
+                            <ItemChartRow label="dk" count="1,884" icon={icon} color="ui-item-row__img--green"/>
+                            <ItemChartRow label="gl" count="984" icon={icon} color="ui-item-row__img--orange"/>
+                            <ItemChartRow label="ds" count="284" icon={icon} color="ui-item-row__img--blue"/>
+                        </div>
+                        <div className="ui-tab-content-right">
                         </div>
                     </Hidden>
-                    <div className="ui-tab-content-right"></div>
                 </div>
             </div>
         );

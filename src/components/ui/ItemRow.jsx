@@ -5,7 +5,7 @@ class ItemRow extends Component {
         return (
             <div className="ui-item-row">
                 <div>
-                    <span className="ui-item-row__img">{this.props.label}</span>
+                    <span className={this.props.color + ' ui-item-row__img '}>{this.props.label}</span>
                     <p className="ui-item-row__num">{this.props.name}</p>
                 </div>
                 <div>

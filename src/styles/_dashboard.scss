@@ -91,6 +91,22 @@
     justify-content: center;
     font-size: 13px;
     font-weight: 700;
+
+    &--orange {
+      background-color: #FF9900;
+    }
+
+    &--blue {
+      background-color: #127BF5;
+    }
+
+    &--green {
+      background-color: #3DDDAA;
+    }
+
+    &--red {
+      background-color: #F73859;
+    }
   }
 
   &__num {

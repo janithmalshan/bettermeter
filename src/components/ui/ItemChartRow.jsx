@@ -5,7 +5,7 @@ class ItemChartRow extends Component {
         return (
             <div className="ui-item-row">
                 <div>
-                    <span className="ui-item-row__img ui-border ui-z-index1">{this.props.label}</span>
+                    <span className={this.props.color + ' ui-item-row__img ui-border ui-z-index1'}>{this.props.label}</span>
                     <span className="ui-item-row__img icon"><img src={this.props.icon}/></span>
                 </div>
                 <div>

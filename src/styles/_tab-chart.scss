@@ -64,7 +64,8 @@
 }
 
 .ui-tab-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   margin: 0 80px 40px;
   background: #FFFFFF;
   border-radius: 0px 20px 20px 20px;
@@ -85,10 +86,17 @@
       vertical-align: top;
     }
 
-    .ui-item-row__img.icon {
-      background: #FAF8F3;
+    .ui-item-row__img {
+
+      &.icon {
+        background: #FAF8F3;
+      }
     }
   }
 
-  &-right {}
+  &-right {
+    background: url("../images/testchart.png") no-repeat center;
+    background-size: contain;
+    height: 100%;
+  }
 }

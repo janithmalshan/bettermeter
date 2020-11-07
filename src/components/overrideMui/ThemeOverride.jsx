@@ -30,7 +30,7 @@ const ThemeDefault = createMuiTheme({
             // Name of the rule
             text: {
                 // Some CSS
-                color: 'red',
+                color: '#5D6677',
             },
         },
         MuiToolbar: {
