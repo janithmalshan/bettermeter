@@ -1,9 +1,10 @@
 import * as React from "react"
 import { IconButton } from "@material-ui/core"
-import { Menu } from "@material-ui/icons"
+import Menu from "../../images/ic-menu.svg"
 import { List, ListItem, ListItemText, Drawer } from "@material-ui/core"
 import { useState } from "react"
 import { makeStyles } from "@material-ui/core/styles"
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     list: {
@@ -14,6 +15,12 @@ const useStyles = makeStyles({
         textTransform: `uppercase`,
         color: `black`,
     },
+    menu: {
+        display: `block`,
+        position: 'fixed',
+        top: '6px',
+        left: '20px'
+    }
 })
 
 const SideDrawer = ({ navLinks }) => {
@@ -37,12 +44,13 @@ const SideDrawer = ({ navLinks }) => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List component="nav">
-                {navLinks.map(({ title, path }) => (
-                    <a href={path} key={title} className={classes.linkText}>
-                        <ListItem button>
-                            <ListItemText primary={title} />
+                {navLinks.map(({ title, icon, path }) => (
+                    <Link to={path} key={title}>
+                        <ListItem button className="ui-toolbar__link">
+                            <img className="ui-toolbar__link-icon" src={icon}/>
+                            <label className="ui-toolbar__link-label">{title}</label>
                         </ListItem>
-                    </a>
+                    </Link>
                 ))}
             </List>
         </div>
@@ -54,8 +62,10 @@ const SideDrawer = ({ navLinks }) => {
                 edge="start"
                 aria-label="menu"
                 onClick={toggleDrawer("left", true)}
+                className={classes.menu}
+                size="medium"
             >
-                <Menu />
+                <img src={Menu}/>
             </IconButton>
             <Drawer
                 anchor="left"

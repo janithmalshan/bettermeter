@@ -32,9 +32,9 @@ const Header = () => {
     const classes = useStyles();
 
     return (
-        <AppBar position="static" elevation={0}>
-            <div className="ui-appbar">
-                <img src={logo} className="ui-appbar__logo"/>
+        <AppBar position="static" elevation={0} className="ui-appbar">
+            <div className="ui-appbar__inner">
+                <img src={logo} className="ui-appbar__inner-logo"/>
             </div>
             <Toolbar>
                 <Hidden smDown> {/* show in desktop*/}

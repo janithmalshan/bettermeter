@@ -1,13 +1,28 @@
 .ui-appbar {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
 
-  &__logo {
-    height: 20px;
-    margin: 4px 0 0 30px;
+  &__inner {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-logo {
+      height: 20px;
+      margin: 4px 0 0 30px;
+
+      @include mobile {
+        margin: 4px auto 0;
+      }
+    }
+
+    @include mobile {
+      height: 48px;
+    }
+  }
+
+  @include mobile {
+    margin-top: 8px;
   }
 }
 
